@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
+gem 'geocoder'
 
 group :development do 
-  gem 'sqlite3'
-  gem 'pry'
+	gem 'sqlite3'
+	gem 'pry'
 end
 
 gem 'sass-rails', '~> 4.0.0'
@@ -16,10 +17,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 
 group :doc do
-  gem 'sdoc', require: false
+	gem 'sdoc', require: false
 end
 
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+	gem 'pg'
+	gem 'rails_12factor'
 end
