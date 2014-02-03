@@ -11,6 +11,7 @@ class LocationsController < ApplicationController
   else
     @locations = Location.all
   end
+  #binding.pry
 end
 
   # GET /locations/1
