@@ -15,8 +15,16 @@ class ItinerariesController < ApplicationController
   end
 
   def update
+    new_locations = 
+      itinerary_params[:locations_attributes].map{ |l| l[1] }
+
+    new_locations.each do |nl|
+      loc = Location.find nl[:id]
+      loc.address = nl[:address]
+      loc.save
+    end
+    
     @itinerary = Itinerary.find(params[:id])
-    @itinerary.update(itinerary_params)
     redirect_to @itinerary
   end
 
