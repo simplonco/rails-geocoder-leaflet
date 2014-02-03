@@ -1,0 +1,11 @@
+<%= form_for @itinerary do |f| %>
+
+  <%= f.fields_for :locations do |lf| %>
+    <%= lf.text_field :address, placeholder: "City" %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit 'Go' %>
+  </div>
+  
+<% end %>

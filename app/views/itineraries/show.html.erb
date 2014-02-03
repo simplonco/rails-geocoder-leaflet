@@ -1,0 +1,30 @@
+<%= map(:center => { :latlng => [@center.latitude, @center.longitude], :zoom => 3 }, :markers => [{ :latlng => [@start.latitude, @start.longitude], :popup => @start.address }, { :latlng => [@end.latitude, @end.longitude], :popup => @end.address }]) %>
+
+
+<% @itinerary.locations.each do |location| %>
+
+    <strong>Address:</strong>
+      <%= location.address %>
+    </p>
+
+    <p>
+      <strong>Latitude:</strong>
+      <%= location.latitude %>
+    </p>
+
+    <p>
+      <strong>Longitude:</strong>
+      <%= location.longitude %>
+    </p>
+
+<% end %>
+
+      <strong>Latitude:</strong>
+      <%= @center.latitude %>
+    </p>
+
+    <p>
+      <strong>Longitude:</strong>
+      <%= @center.longitude %>
+    </p>
+
