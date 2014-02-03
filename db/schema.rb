@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203112244) do
+ActiveRecord::Schema.define(version: 20140203145910) do
+
+  create_table "itineraries", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "locations", force: true do |t|
     t.string   "address"
@@ -19,6 +24,9 @@ ActiveRecord::Schema.define(version: 20140203112244) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "itinerary_id"
   end
+
+  add_index "locations", ["itinerary_id"], name: "index_locations_on_itinerary_id"
 
 end
