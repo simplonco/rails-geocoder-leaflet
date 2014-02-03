@@ -8,17 +8,15 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <h1 class="text-center">From A to B</h1>
     <p class="text-center">Where do you want to fly?</p>
-    <div class="row">
-      <div class="large-8 large-centered columns">
-        <%= yield %>
-      </div>
-    </div>
+      <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
