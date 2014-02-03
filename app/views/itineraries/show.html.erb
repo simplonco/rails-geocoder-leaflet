@@ -1,30 +1,17 @@
-<%= map(:center => { :latlng => [@center.latitude, @center.longitude], :zoom => 3 }, :markers => [{ :latlng => [@start.latitude, @start.longitude], :popup => @start.address }, { :latlng => [@end.latitude, @end.longitude], :popup => @end.address }]) %>
+<%= render 'form' %>
 
+<div id="map"></div>
+
+<%= render 'map_script' %>
 
 <% @itinerary.locations.each do |location| %>
+  <strong>Address: </strong>
+  <%= location.address %>
 
-    <strong>Address:</strong>
-      <%= location.address %>
-    </p>
+  <strong>Latitude: </strong>
+  <%= location.latitude %>
 
-    <p>
-      <strong>Latitude:</strong>
-      <%= location.latitude %>
-    </p>
-
-    <p>
-      <strong>Longitude:</strong>
-      <%= location.longitude %>
-    </p>
-
+  <strong>Longitude: </strong>
+  <%= location.longitude %>
+  <br>
 <% end %>
-
-      <strong>Latitude:</strong>
-      <%= @center.latitude %>
-    </p>
-
-    <p>
-      <strong>Longitude:</strong>
-      <%= @center.longitude %>
-    </p>
-

@@ -2,7 +2,7 @@ class ItinerariesController < ApplicationController
 
   def new
     @itinerary = Itinerary.new
-    2.times { @itinerary.locations.build}
+    2.times { @itinerary.locations.build }
   end
 
   def create
@@ -14,18 +14,17 @@ class ItinerariesController < ApplicationController
     end
   end
 
+  def update
+    @itinerary = Itinerary.find(params[:id])
+    @itinerary.update(itinerary_params)
+    redirect_to @itinerary
+  end
+
   def show
     @itinerary = Itinerary.find(params[:id])
-    @start = @itinerary.locations.first
-    @end = @itinerary.locations.last
 
-    # calculate map center from 2 points
-    lats = [@start.latitude, @end.latitude]
-    longs = [@start.longitude, @end.longitude]
-
-    @center = Location.new
-    @center.latitude = ((lats.max - lats.min) / 2 ) + lats.min
-    @center.longitude = ((longs.max - longs.min) / 2 ) + longs.min
+    # fill bounds: http://leafletjs.com/reference.html#latlngbounds
+    @bounds = @itinerary.locations.map{ |l| [l.latitude, l.longitude] }
   end
 
   private

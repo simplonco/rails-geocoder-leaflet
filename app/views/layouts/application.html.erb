@@ -8,15 +8,17 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "leaflet" %>
 
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <h1 class="text-center">From A to B</h1>
-    <p class="text-center">Where do you want to fly?</p>
-      <%= yield %>
-    <%= javascript_include_tag "application" %>
+    <h1 class="text-center">
+      <%= link_to "From A to B", root_path %>
+    </h1>
+    <p class="text-center">What is your trip?</p>
+    <%= yield %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>

@@ -1,6 +1,5 @@
 RailsGeoloc::Application.routes.draw do
   root 'itineraries#new'
-  resources :locations
   resources :itineraries
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
