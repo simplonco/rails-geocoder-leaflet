@@ -13,3 +13,11 @@
 
   * [Geocoder](https://github.com/alexreisner/geocoder), traduire une ville en coordonnées GPS
   * [Leaflet](http://leafletjs.com/examples/quick-start.html), pour afficher des points GPS sur une jolie carte.
+
+## Step by Step
+
+=> Tutorial Geocoder détaillé sur [RailsCasts] (http://railscasts.com/episodes/273-geocoder)
+
+
+
+
