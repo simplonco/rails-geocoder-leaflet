@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203145910) do
+ActiveRecord::Schema.define(version: 20140221212342) do
+
+  create_table "countries", force: true do |t|
+    t.string   "country_code"
+    t.string   "capital"
+    t.integer  "surface_area"
+    t.string   "geo_zone"
+    t.integer  "pop_count"
+    t.integer  "pop_density"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "itineraries", force: true do |t|
     t.datetime "created_at"
