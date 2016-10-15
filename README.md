@@ -1,4 +1,7 @@
+# rails-geocoder-leaflet [![Build Status](https://travis-ci.org/simplonco/rails-geocoder-leaflet.svg?branch=master)](https://travis-ci.org/simplonco/rails-geocoder-leaflet)
+
 ## Fonctionalités
+
 ### Done
 
   * Quand je saisi le nom de 2 villes, elles s'affichent sur la carte.
@@ -18,7 +21,3 @@
 ## Step by Step
 
 => Tutorial Geocoder détaillé sur [RailsCasts] (http://railscasts.com/episodes/273-geocoder)
-
-
-
-
